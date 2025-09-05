@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#nav1{
+    background-color: #E73121;
+}
+
+#nav1 ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#nav1 li{
+    height: 60px;
+}
+
+#nav1 a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#nav1 a:hover{
+    background-color: #cc2e1f;
+    transition: 0.5s;
+    color: #F1F1F1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav1 li:first-child{
+    margin-right: auto;
+}
+
+/* Barra de navegación nº2 */
+#nav2{
+    background-color:#cc2e1f;
+}
+
+#nav2 .bar2{
+    margin-top: -16px;
+}
+
+#nav2 ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#nav2 li{
+    height: 35px;
+}
+
+#nav2 a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+/* Modifica el elemento seleccionado de la navbar */
+#nav2 a:hover{
+    transition: 0s;
+    color: #F1F1F1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Permite que el primer elemento de la barra de búsqueda esté a la derecha */
+
+
+/* Barra de búsqueda */
+#nav2 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #E73121;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+#nav2 .sidebar.show {
+    transform: translateX(0);
+}
+
+/* Modificación de los elementos en la barra de búsqueda */
+#nav2 .sidebar li{
+    width: 100%;
+}
+
+/* Define el tamaño mínimo en el que se puede visualizar la barra de búsqueda*/
+@media(max-width: 800px){
+    #nav2 .hideOnMobile{
+        display: none;
+    }
+}
