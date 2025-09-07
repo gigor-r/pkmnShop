@@ -12,8 +12,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* Barra de navegación nº1 */
 #nav1{
-    background-color: #E73121;
+    background-color: #000000;
 }
 
 #nav1 ul{
@@ -35,12 +36,12 @@ body{
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 #nav1 a:hover{
-    background-color: #cc2e1f;
-    transition: 0.5s;
+    background-color: #000000;
+    transition: 0s;
     color: #F1F1F1;
     text-decoration: none;
     font-weight: bold;
@@ -52,7 +53,7 @@ body{
 
 /* Barra de navegación nº2 */
 #nav2{
-    background-color:#cc2e1f;
+    background-color:#161616;
 }
 
 #nav2 .bar2{
@@ -81,7 +82,6 @@ body{
     font-weight: normal;
 }
 
-/* Modifica el elemento seleccionado de la navbar */
 #nav2 a:hover{
     transition: 0s;
     color: #F1F1F1;
@@ -89,17 +89,13 @@ body{
     font-weight: bold;
 }
 
-/* Permite que el primer elemento de la barra de búsqueda esté a la derecha */
-
-
-/* Barra de búsqueda */
 #nav2 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 200px;
-    background-color: #E73121;
+    background-color: #000000;
     box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     align-items: flex-start;
@@ -113,14 +109,13 @@ body{
     transform: translateX(0);
 }
 
-/* Modificación de los elementos en la barra de búsqueda */
 #nav2 .sidebar li{
     width: 100%;
 }
 
-/* Define el tamaño mínimo en el que se puede visualizar la barra de búsqueda*/
 @media(max-width: 800px){
     #nav2 .hideOnMobile{
         display: none;
     }
 }
+/* Fin barras de navegación */
