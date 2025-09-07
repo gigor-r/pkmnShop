@@ -16,29 +16,23 @@
     <!-- Script JQuery y JS -->
     <script src="JS/sideBarScript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS/createAccountScript.js"></script>
     <title>Poké-Shop</title>
 </head>
-
 <body>
-    <!-- Navbar -->
     <nav id="nav1">
-        <ul>
-            <li><a href="menuPokeShop.html"><img src="images/menuPokeShopImages/pokeballIcon.png" height="50px" width="50px" alt="pagPrincipal" id="pokeballIcon"></a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="createAccount.html">Register</a></li>
-        </ul>
+        <il id="authLinks"></il>
     </nav>
 
+    <!-- Creación de la navbar 2-->
     <nav id="nav2">
+        
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="cataloguePokeballs.html">Pokéballs</a></li>
             <li><a href="catalogueMedicine.html">Medicine</a></li>
             <li><a href="#">MT's</a></li>
             <li><a href="#">Repels</a></li>
-            <li><a href="#">Berries</a></li>
-            <li><a href="#">Stones</a></li>
             <li><a href="#">Donate</a></li>
             <li><a href="#">About</a></li>
         </ul>
@@ -53,7 +47,7 @@
             
         </ul>
     </nav>    
-    <!-- Fin de la navbar -->
+    <!-- Fin de la navbar 2 -->
 
     <!-- Contenido principal -->
     <div class="container" id="categories">
@@ -88,60 +82,30 @@
             <hr>
         </div>
         <div class="col" id="objects">
-            <a href="#"><img src="images/menuPokeShopImages/objectMt.png" class="imgCard" alt="mt"></a>
-            <a href="#"><img src="images/menuPokeShopImages/objectRepel.png" class="imgCard" alt="repels"></a>
+            <a href="#"><img src="images/menuPokeShopImages/objectMt.png" class="imgCard" alt="MT"></a>
+            <a href="#"><img src="images/menuPokeShopImages/objectRepel.png" class="imgCard" alt="Repels"></a>
         </div>
-        <div class="col" id="objectsCol2">
-            <a href="#"><img src="images/menuPokeShopImages/objectBerries.png" class="imgCard" alt="berries"></a>
-            <a href="#"><img src="images/menuPokeShopImages/objectDonate.png" class="imgCard" alt="stones"></a>
+        <div class="col" id="objects">
+            <a href="#"><img src="images/menuPokeShopImages/objectMt.png" class="imgCard" alt="Berries"></a>
+            <a href="#"><img src="images/menuPokeShopImages/objectDonate.png" class="imgCard" alt="donate"></a>
         </div>
             <a href="#" id="pkmnGold"><img src="images/menuPokeShopImages/objectPkmnGold.png" class="img-fluid" alt="#pkmnGold"></a>
-        <!-- Comienzo  de productos -->
         <div class="row mb-4">
             <h6>PRODUCTS</h6>
             <hr>
-            <div id="product">
-                <div class="col">
-                    <a href="#"><img src="images/pokeballsImages/00pokéball.png" alt="pokeball" width="18%"></a>
-                    <a href="#"><img src="images/pokeballsImages/01honorball.png" alt="honorball" width="18%"></a>
-                    <a href="#"><img src="images/pokeballsImages/02superball.png" alt="superball" width="18%"></a>
-                    <a href="#"><img src="images/pokeballsImages/03ultraball.png" alt="ultraball" width="18%"></a>
-                </div>
-                <br>
-                <div class="col">
-                    <a href="#"><img src="images/medicineImages/00potion.png" alt="potion" width="18%"></a>
-                    <a href="#"><img src="images/medicineImages/01superpotion.png" alt="superPotion" width="18%"></a>
-                    <a href="#"><img src="images/medicineImages/02hiperpotion.png" alt="hyperPotion" width="18%"></a>
-                    <a href="#"><img src="images/medicineImages/03revivir.png" alt="revive" width="18%"></a>
-                </div>   
-                <br>
-                <div class="col">
-                    <a href="#"><img src="images/mtsImages/00mt.png" alt="mt00" width="18%"></a>
-                    <a href="#"><img src="images/mtsImages/01mt.png" alt="mt01" width="18%"></a>
-                    <a href="#"><img src="images/mtsImages/02mt.png" alt="mt02" width="18%"></a>
-                    <a href="#"><img src="images/mtsImages/03mt.png" alt="mt03" width="18%"></a>
-                </div>    
-            </div>
-        </div>     
-
-        <div class="row mb-4">
-            <h6>INFO</h6>
-            <hr>
-            <div class="info">
-                <a href="#"><img src="images/menuPokeShopImages/objectAboutUs.png" class="imgCard" alt="aboutUs"></a>
-                <a href="#"><img src="images/menuPokeShopImages/objectDonate.png" class="imgCard" alt="donate"></a>
-            </div>
         </div>
+    </div>     
     
 
+    <br>
     <!-- Pie de página -->
-    <footer>
-        <div class="text-center p-3" width="100%">
-                © 2025 Copyright:
-                <a class="text-dark" href="#" id="pokeshop">PokéShop.com</a>
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.03);">
+            © 2025 Copyright:
+            <a class="text-dark" href="#" id="pokeshop">PokéShop.com</a>
         </div>
     </footer>
-    
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
