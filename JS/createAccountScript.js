@@ -54,10 +54,11 @@ if (form) {
             alert("El email ya está registrado");
             return;
         }
-
+        // Cifrar la contraseña antes de guardarla
+        const hash = CryptoJS.SHA256(contra1.value).toString();
         let usuario = {
             nombre: user.value,
-            pass: contra1.value,
+            pass: hash,
             email: email1.value
         };
             usuarios.push(usuario);
@@ -79,7 +80,7 @@ function loguear() {
     // Recuperar usuarios guardados en localStorage
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     // Buscar coincidencia
-    const user = usuarios.find(u => u.nombre === nombre && u.pass === pass);
+    const user = usuarios.find(u => u.nombre.toLowerCase === nombre.toLowerCase && u.pass === pass);
 
 
     if (!nombre || !pass) {
