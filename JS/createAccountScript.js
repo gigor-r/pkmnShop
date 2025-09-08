@@ -77,16 +77,18 @@ function loguear() {
 
     const nombre = document.getElementById("loginNombre").value;
     const pass = document.getElementById("loginPass").value;
-    // Recuperar usuarios guardados en localStorage
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    // Buscar coincidencia
-    const user = usuarios.find(u => u.nombre.toLowerCase === nombre.toLowerCase && u.pass === pass);
-
-
     if (!nombre || !pass) {
         alert("Por favor, complete todos los campos");
         return;
     }
+    // Recuperar usuarios guardados en localStorage
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    //calcular el hash de la contraseña ingresada
+    const hash = CryptoJS.SHA256(pass).toString();
+    //comparar el hash con la contraseña almacenada
+    const user = usuarios.find(u => u.nombre.toLowerCase() === nombre.toLowerCase() && u.pass === hash);
+
+
     if (user) {
         localStorage.setItem("usuario", user.nombre);
         alert("Bienvenido " + user.nombre);
